@@ -9,7 +9,7 @@ ENV MYSQLCLIENT_CFLAGS="-I/usr/include/mysql"
 ENV MYSQLCLIENT_LDFLAGS="-L/usr/lib/x86_64-linux-gnu -lmysqlclient"
 
 WORKDIR /app
-COPY ./requirements.txt /app/
+COPY ./requirements.txt /app
 
 RUN pip install --no-cache-dir --requirement /app/requirements.txt
 COPY . /app/
